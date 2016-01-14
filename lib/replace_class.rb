@@ -1,4 +1,4 @@
-#!/bin/usr/ruby -w
+#!/usr/bin/ruby -w
 
 require 'pathname'
 require 'optparse'
@@ -66,6 +66,12 @@ def check_valid_with_file(filename)
 
 end
 
+def match?(line_or_filename)
+   
+   regex = Regexp.new("([^a-zA-Z]|^)(#{@options[:source]})([^a-zA-Z]|$)")
+   line_or_filename =~ regex
+end
+
 # main function
 def checkDir(dir)
 
@@ -93,17 +99,17 @@ def checkDir(dir)
 			if hidden?(filename)
 				next
 			end
+            
+            if match?(filename)
+                puts "matching regex to file: #{filename}"
+            end
 
-			puts "####### #{filename} ###########"
 			lines = IO.readlines(filePath)
 			lines.each_index do |index| 
 
 				line = lines[index]
-                regex = Regexp.new("([^a-zA-Z]|^)(#{@options[:source]})([^a-zA-Z]|$)")
-				result = line =~ regex
-				if result
-
-					puts "matching regex in line : #{index + 1} with line:\n#{line}"
+				if match?(line)
+					puts "matching regex in line : [#{filename} : #{index + 1}] with content:\n#{line}"
 				end
 			end
 		end

@@ -1,0 +1,5 @@
+#!/usr/bin/ruby -w
+
+bin = File.expand_path('../../lib', __FILE__)
+$LOAD_PATH.unshift(bin) unless $LOAD_PATH.include?(bin)
+require '../lib/replace_class'
