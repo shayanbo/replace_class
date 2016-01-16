@@ -1,8 +1,12 @@
 module ReplaceClass
 
+	##
+	# wrapper for built-in OptionParser
 	class OptParser
 
-		def self.parse
+		##
+		# start parse options
+		def self.parse # :yield: parser, cli_opts
 
 			unless block_given? then
 				exit false

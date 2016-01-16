@@ -4,8 +4,19 @@ require 'optparse'
 require 'replace_class/utils'
 require 'replace_class/option_parser'
 
+#
+# main module for this gem
+#
+# === Example
+# ReplaceClass.start
+#
 module ReplaceClass
 
+	#--
+	# TODO: finish replace job
+	#++
+	# replace class from source to dest (include file name)
+	#
 	def self.start
 
 		# option parse
@@ -38,8 +49,10 @@ module ReplaceClass
 		end
 	end
 
+	#:stopdoc:
+
 	##
-	# :nodoc:
+	# short cut for matching string
 	def self.match?(line_or_filename)
 	   
 	   regex = Regexp.new("([^a-zA-Z]|^)(#{$options[:source]})([^a-zA-Z]|$)")
@@ -47,7 +60,7 @@ module ReplaceClass
 	end
 
 	##
-	# :nodoc:
+	# traverse dir for checking replacement
 	def self.checkDir(dir)
 
 		aDir = Dir.new(dir)
