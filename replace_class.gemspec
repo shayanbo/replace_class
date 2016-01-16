@@ -4,7 +4,8 @@
 Gem::Specification.new do |s|
   s.name = "replace_class"
   s.version = "1.0.3"
-
+  s.extra_rdoc_files = ["README.rdoc", "LICENSE"]
+  s.rdoc_options = ["--main", "README.rdoc"]
   s.require_paths = ["lib"]
   s.authors = ["MickeyHub"]
   s.date = Time.now.strftime("%Y-%m-%d")
