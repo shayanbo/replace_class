@@ -19,5 +19,5 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.summary = "An Neat Script to Replace Class Name Globally for Xcode"
   s.description = "easy way to replace class name in xcode using ruby"
-  s.executables = s.files.grep(%(^bin/))
+  s.executables = s.files.grep(%r{^bin/}){|f| File.basename(f)}
 end
