@@ -3,7 +3,7 @@ module ReplaceClass
 	##
 	# filename util
 	class Util
-		
+
 		##
 		# valid file types
 		VALID_FILE_TYPE = [".h", ".m", ".pbxproj",".swift"]
@@ -35,13 +35,10 @@ module ReplaceClass
 					if File.extname(filename) == ext
 						return true
 					end
-					
 				end
 			end
 			false
-
 		end
-
 
 	end
 
