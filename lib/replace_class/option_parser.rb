@@ -15,7 +15,7 @@ module ReplaceClass
 			options = {}
 			parser = OptionParser.new do |opt|
 
-				opt.banner = "Usage: [update_name -s source -d dest path]"
+				opt.banner = "Usage: replace_class [-s|--source] source [-d|--dest] [-fy] dest path"
 
 				opt.on('-s', '--source sourceClass', 'Source class name for replacement') do |value|
 					options[:source] = value
