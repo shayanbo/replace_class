@@ -2,7 +2,7 @@ ReplaceClassName
 ---
 `ReplaceClassName` is An Easy Way for Replacing Classname
 
-[![Gem Version](https://badge.fury.io/rb/replace_class.svg)](http://badge.fury.io/rb/fir-cli)
+[![Gem Version](https://badge.fury.io/rb/replace_class.svg)](http://badge.fury.io/rb/replace_class)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MickeyHub/ReplaceClassName)
 
 
@@ -13,9 +13,9 @@ ReplaceClassName
 $ gem install replace_class
 ```
 
-**Note: If Mac OS X 10.11 or later, for `rootless`, can not install fir-cli directly, following is solution:**
+**Note: If Mac OS X 10.11 or later, for `rootless`, you can not install replace_class directly, following is solution:**
 
-1\. use [Homebrew](http://brew.sh/) and [RVM](https://rvm.io/) to install Ruby, then install fir-cli(recommand)
+1\. use [Homebrew](http://brew.sh/) and [RVM](https://rvm.io/) to install Ruby, then install replace_class(recommand)
 
 ```sh
 # Install Homebrew:
